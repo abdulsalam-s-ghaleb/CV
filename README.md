@@ -1,98 +1,69 @@
-# Deno + SvelteKit Dinosaur App Tutorial
+# SvelteKit Project
 
-A tutorial project demonstrating how to build a full-stack web application using Deno and SvelteKit. This project showcases modern web development practices with TypeScript, server-side rendering, and API routes.
-
-## Make it your own!
-
-You can deploy your own version of this svelte app to Deno Deploy immediately.
-Just click the button to clone and deploy.
-
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/denoland/tutorial-with-svelte)
-
+This is a project built with SvelteKit, a modern web development framework for building fast and robust web applications.
 
 ## Tech Stack
 
-- **Runtime**: [Deno](https://deno.com/)
 - **Framework**: [SvelteKit](https://kit.svelte.dev/)
 - **Language**: TypeScript
 - **Build Tool**: Vite
-- **Adapter**: Deno SvelteKit Adapter
-
-## Project Structure
-
-```text
-tutorial-with-svelte/
-├── src/
-│   ├── routes/
-│   │   ├── +layout.svelte          # Global layout
-│   │   ├── +page.svelte            # Homepage - dinosaur list
-│   │   ├── +page.ts                # Homepage data loader
-│   │   ├── [dinosaur]/             # Dynamic route for individual dinosaurs
-│   │   │   ├── +page.svelte        # Dinosaur detail page
-│   │   │   └── +page.ts            # Dinosaur data loader
-│   │   └── api/
-│   │       ├── data.json           # Dinosaur database (3000+ entries)
-│   │       └── dinosaurs/
-│   │           └── +server.js      # API endpoint for dinosaur data
-│   ├── app.css                     # Global styles
-│   ├── app.html                    # HTML template
-│   └── lib/
-├── static/                         # Static assets
-├── deno.json                       # Deno configuration
-├── package.json                    # NPM scripts for Vite
-├── svelte.config.js               # SvelteKit configuration
-└── vite.config.ts                 # Vite configuration
-```
+- **UI Components**: daisyUI, Lucide Svelte
+- **Styling**: Tailwind CSS
 
 ## Getting Started
 
+### Prerequisites
+
+- [Deno](https://deno.com/) installed on your machine.
+- A code editor like [VS Code](https://code.visualstudio.com/).
+
 ### Installation & Setup
 
-1. Clone or download this project and install dependencies
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <your-repository-url>
+    cd <your-project-directory>
+    ```
+
+2.  **Install dependencies:**
+
+    The project uses `npm` packages managed via Deno. These will be installed automatically when you run the development server.
+
+### Running the Development Server
+
+To start the development server, run the following command:
 
 ```bash
-git clone https://github.com/denoland/tutorial-with-svelte.git
-cd tutorial-with-svelte
-deno install
+deno run -A npm:vite
 ```
 
-2. Run the dev server
-
-```bash
-deno run dev
-```
-
-3. Open your browser and navigate to [http://localhost:5173](http://localhost:5173)
+The application will be available at `http://localhost:5173`.
 
 ## Available Scripts
 
-```bash
-# Start development server
-deno run dev
+-   `deno run -A npm:vite`: Starts the development server.
+-   `deno run -A npm:vite build`: Builds the application for production.
+-   `deno run -A npm:vite preview`: Previews the production build locally.
 
-# Build for production
-deno run build
+## Project Structure
 
-# Preview production build
-deno run preview
+```
+.
+├── src
+│   ├── routes
+│   │   ├── +layout.svelte
+│   │   ├── +page.svelte
+│   │   └── ... (other routes)
+│   ├── app.css
+│   ├── app.d.ts
+│   └── app.html
+├── static
+│   └── favicon.svg
+├── svelte.config.js
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-## How It Works
 
-### 1. Homepage (`/`)
-
-- Loads all dinosaurs from the API endpoint
-- Displays them as clickable links
-- Uses SvelteKit's `load` function for server-side data fetching
-
-### 2. API Routes (`/api/dinosaurs`)
-
-- Serves dinosaur data from a JSON file
-- Uses SvelteKit's server routes feature
-- Returns data in JSON format
-
-### 3. Dynamic Routes (`/[dinosaur]`)
-
-- Matches any dinosaur name in the URL
-- Fetches specific dinosaur data
-- Displays detailed information with a back link

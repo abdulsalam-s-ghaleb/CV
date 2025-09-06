@@ -1,21 +1,25 @@
 {
-	"name": "tutorial-with-svelte",
-	"private": true,
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"dev": "deno run -A npm:vite",
-		"build": "deno run -A npm:vite build",
-		"preview": "deno run -A npm:vite preview"
-	},
-	"devDependencies": {
-		"@deno/svelte-adapter": "^0.1.0",
-		"@sveltejs/adapter-auto": "^6.0.0",
-		"@sveltejs/kit": "^2.22.0",
-		"@sveltejs/vite-plugin-svelte": "^6.0.0",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"typescript": "^5.0.0",
-		"vite": "^7.0.4"
-	}
+  "name": "tutorial-with-svelte",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "deno run -A npm:vite",
+    "build": "deno run -A npm:vite build",
+    "preview": "deno run -A npm:vite preview"
+  },
+  "devDependencies": {
+    "@deno/svelte-adapter": "^0.1.0",
+    "@sveltejs/adapter-auto": "^6.0.0",
+    "@sveltejs/kit": "^2.22.0",
+    "@sveltejs/vite-plugin-svelte": "^6.0.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.0.0",
+    "vite": "^7.0.4",
+    "daisyui": "^5.0.50",
+    "@lucide/svelte": "^0.541.0"
+  }
 }
