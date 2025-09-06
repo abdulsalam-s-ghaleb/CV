@@ -42,7 +42,9 @@
 		Email: Mail
 	};
 </script>
-
+<svelte:head>
+	<title>Abdulsalam Ghaleb - BCS.Software Engineering | Full Stack Developer | Desktop/Mobile Development | Artificial Intelligence (AI) </title>
+</svelte:head>
 <svelte:window bind:scrollY />
 
 <div class="relative min-h-screen overflow-hidden bg-base-100">
